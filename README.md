@@ -1,6 +1,6 @@
-# Integração da API SINTEGRA em Python – Consulta de Inscrição Estadual em tempo real
+# Integração da API SINTEGRA em Java – Consulta de Inscrição Estadual em tempo real
 
-Exemplo de integração em **Python** com a API SINTEGRA da **ArquivoNFe**, para consulta de dados cadastrais por UF.
+Exemplo de integração em **Java** com a API SINTEGRA da **ArquivoNFe**, para consulta de dados cadastrais por UF.
 
 A API permite realizar consultas utilizando **CNPJ, CPF ou Inscrição Estadual (IE)**, conforme a disponibilidade da consulta para cada UF.
 
