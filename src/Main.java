@@ -593,7 +593,7 @@ public class Main {
                                 "Authorization",
                                 "Bearer " + TOKEN
                         )
-                        .POST()
+                        .POST(HttpRequest.BodyPublishers.noBody())
                         .build();
 
 
