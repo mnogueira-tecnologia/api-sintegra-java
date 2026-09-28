@@ -93,8 +93,7 @@ public class Main {
                 System.out.println("Parâmetros: " + parametros);
 
 
-                HttpResponse<String> resposta =
-                        enviarRequisicao(parametros);
+                HttpResponse<String> resposta = enviarRequisicao(parametros);
 
 
                 System.out.println("URL enviada:");
@@ -594,7 +593,7 @@ public class Main {
                                 "Authorization",
                                 "Bearer " + TOKEN
                         )
-                        .GET()
+                        .POST()
                         .build();
 
 
