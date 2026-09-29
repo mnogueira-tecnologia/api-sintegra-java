@@ -14,29 +14,31 @@ A API permite realizar consultas utilizando **CNPJ, CPF ou Inscrição Estadual 
 * Consulta CNPJ
 * Consulta CPF
 * Consulta Inscrição Estadual por API
+* API REST Java
+* Integração Java com API
 
 ## Benefícios
 
-✔ Consulta por CNPJ, CPF ou IE<br>
-✔ Dados cadastrais retornados pela API<br>
-✔ Integração simples via API REST<br>
-✔ Processamento assíncrono utilizando `request_id`<br>
-✔ Exemplo prático de integração em Python
+✔ Consulta por CNPJ, CPF ou IE
+✔ Dados cadastrais retornados pela API
+✔ Integração simples via API REST
+✔ Processamento assíncrono utilizando `request_id`
+✔ Exemplo prático de integração em Java
 
 ## Casos de uso
 
-✔ Validação cadastral antes da emissão de NF<br>
-✔ Conferência cadastral automática<br>
-✔ Verificação de informações de empresas e contribuintes<br>
-✔ Integração com sistemas ERP e aplicações próprias<br>
+✔ Validação cadastral antes da emissão de NF
+✔ Conferência cadastral automática
+✔ Verificação de informações de empresas e contribuintes
+✔ Integração com sistemas ERP e aplicações próprias
 ✔ Processos de KYC (Know Your Customer)
 
 ## Diferenciais
 
-✔ Consulta dos dados cadastrais disponibilizados pela SEFAZ da UF consultada.<br>
-✔ Comunicação segura por HTTPS.<br>
-✔ Infraestrutura hospedada na Oracle Cloud no Brasil.<br>
-✔ Painel web para configurações, consultas manuais e acompanhamento das integrações via API.<br>
+✔ Consulta dos dados cadastrais disponibilizados pela SEFAZ da UF consultada.
+✔ Comunicação segura por HTTPS.
+✔ Infraestrutura hospedada na Oracle Cloud no Brasil.
+✔ Painel web para configurações, consultas manuais e acompanhamento das integrações via API.
 ✔ API REST com suporte a consultas por CNPJ, CPF ou Inscrição Estadual.
 
 ---
@@ -44,9 +46,9 @@ A API permite realizar consultas utilizando **CNPJ, CPF ou Inscrição Estadual 
 ## 🚀 Requisitos
 
 * Windows ou Linux
-* Python 3.x
+* Java JDK 11 ou superior
+* Apache Maven 3.8 ou superior
 * Git (opcional, caso escolha clonar o projeto)
-* Biblioteca `requests`
 
 ---
 
@@ -71,68 +73,105 @@ Após o login no portal:
 
 > ⚠️ **Nunca publique seu token de acesso no GitHub.**
 
-No arquivo `consulta_sintegra.py`, informe seu token apenas localmente:
+No arquivo `Main.java`, informe seu token apenas localmente:
 
-```python
-TOKEN = 'SEU_TOKEN_AQUI'
+```java
+private static final String TOKEN = "SEU_TOKEN_AQUI";
 ```
 
 Antes de publicar o código no GitHub, certifique-se de que o token não esteja preenchido.
 
 ---
 
-### 3️⃣ Instalação do Python
+### 3️⃣ Instalação do Java JDK
 
-O exemplo utiliza **Python 3**.
+O exemplo utiliza **Java 11 ou superior**.
 
 #### Windows
 
-Baixe o Python pelo site oficial:
+Baixe o JDK pelo site oficial:
 
-https://www.python.org/downloads/windows/
+https://www.oracle.com/java/technologies/downloads/
 
-Durante a instalação, marque a opção:
-
-**Add python.exe to PATH**
-
-Depois de concluir a instalação, abra o **Prompt de Comando (CMD)** e execute:
+Após a instalação, abra o **Prompt de Comando (CMD)** e execute:
 
 ```bash
-python --version
+java -version
 ```
 
-O comando deverá apresentar a versão instalada, por exemplo:
+Verifique também o compilador:
+
+```bash
+javac -version
+```
+
+Os comandos deverão apresentar a versão instalada, por exemplo:
 
 ```text
-Python 3.13.x
+java version "11.x"
+javac 11.x
 ```
 
 #### Linux
 
-Verifique se o Python 3 está instalado:
+Verifique se o Java está instalado:
 
 ```bash
-python3 --version
+java -version
 ```
 
-Caso não esteja instalado, utilize o gerenciador de pacotes da sua distribuição.
-
-Por exemplo, no Ubuntu/Debian:
+Caso não esteja instalado, no Ubuntu/Debian utilize:
 
 ```bash
 sudo apt update
-sudo apt install python3 python3-pip python3-venv
+sudo apt install openjdk-11-jdk
 ```
 
 Depois confirme:
 
 ```bash
-python3 --version
+java -version
+javac -version
 ```
 
 ---
 
-### 4️⃣ Baixe o projeto
+### 4️⃣ Instalação do Apache Maven
+
+O Maven é utilizado para compilar e executar o projeto, além de gerenciar as dependências Java.
+
+#### Windows
+
+Baixe o Maven pelo site oficial:
+
+https://maven.apache.org/download.cgi
+
+Extraia o arquivo e configure a variável de ambiente `PATH` para incluir a pasta `bin` do Maven.
+
+Verifique a instalação:
+
+```bash
+mvn -version
+```
+
+#### Linux
+
+No Ubuntu/Debian:
+
+```bash
+sudo apt update
+sudo apt install maven
+```
+
+Verifique:
+
+```bash
+mvn -version
+```
+
+---
+
+### 5️⃣ Baixe o projeto
 
 Você pode baixar o projeto diretamente pelo GitHub ou cloná-lo utilizando o Git.
 
@@ -149,93 +188,53 @@ Depois, extraia o arquivo em uma pasta do seu computador.
 Se o Git estiver instalado, execute:
 
 ```bash
-git clone https://github.com/mnogueira-tecnologia/api-sintegra-python.git
+git clone https://github.com/mnogueira-tecnologia/api-sintegra-java.git
 ```
 
 Depois acesse a pasta do projeto:
 
 ```bash
-cd api-sintegra-python
+cd api-sintegra-java
 ```
 
 ---
 
-### 5️⃣ Crie um ambiente virtual Python
+### 6️⃣ Estrutura do projeto
 
-É recomendado utilizar um ambiente virtual para manter as dependências do projeto isoladas.
-
-#### Windows
-
-Dentro da pasta do projeto, execute:
-
-```bash
-python -m venv .venv
-```
-
-Ative o ambiente virtual:
-
-```bash
-.venv\Scripts\activate
-```
-
-Após a ativação, o terminal deverá apresentar algo semelhante a:
+O projeto possui a seguinte estrutura:
 
 ```text
-(.venv) C:\Users\seu_usuario\api-sintegra-python>
+api-sintegra-java/
+│
+├── pom.xml
+├── README.md
+├── sintegra.png
+├── teste_etapa1.png
+├── teste_etapa2.png
+├── teste_etapa3.png
+│
+└── src/
+    └── main/
+        └── java/
+            └── Main.java
 ```
 
-#### Linux
-
-Crie o ambiente virtual:
-
-```bash
-python3 -m venv .venv
-```
-
-Ative o ambiente:
-
-```bash
-source .venv/bin/activate
-```
-
----
-
-### 6️⃣ Instale as dependências
-
-Com o ambiente virtual ativado, instale a biblioteca `requests` e as demais dependências do projeto:
-
-#### Windows
-
-```bash
-pip install -r requirements.txt
-```
-
-#### Linux
-
-```bash
-pip3 install -r requirements.txt
-```
-
-Você também pode verificar se a biblioteca `requests` foi instalada corretamente:
-
-```bash
-pip show requests
-```
+O arquivo `pom.xml` contém as configurações do Maven e as dependências necessárias para o projeto, incluindo a biblioteca Jackson para tratamento das respostas JSON.
 
 ---
 
 ### 7️⃣ Configure seu Token
 
-Abra o arquivo [`consulta_sintegra.py`](consulta_sintegra.py) e informe seu token de acesso:
+Abra o arquivo [`Main.java`](src/main/java/Main.java) e informe seu token de acesso:
 
-```python
-TOKEN = 'SEU_TOKEN_AQUI'
+```java
+private static final String TOKEN = "SEU_TOKEN_AQUI";
 ```
 
 Por exemplo:
 
-```python
-TOKEN = '123456789abcdef'
+```java
+private static final String TOKEN = "123456789abcdef";
 ```
 
 > ⚠️ **O token acima é apenas um exemplo. Nunca utilize ou publique tokens reais no GitHub.**
@@ -244,20 +243,20 @@ Antes de executar o projeto, certifique-se de que o token esteja configurado cor
 
 ---
 
-### 8️⃣ Execute o exemplo
+### 8️⃣ Compile e execute o exemplo
 
-Com o ambiente virtual ativado e o token configurado, execute o script.
-
-#### Windows
+Dentro da pasta do projeto, execute a compilação:
 
 ```bash
-python consulta_sintegra.py
+mvn clean compile
 ```
 
-#### Linux
+O Maven fará o download automático das dependências necessárias e compilará o código Java.
+
+Para executar o exemplo:
 
 ```bash
-python3 consulta_sintegra.py
+mvn exec:java
 ```
 
 O script realizará as consultas configuradas no exemplo e exibirá os resultados retornados pela API no terminal.
@@ -273,16 +272,42 @@ O exemplo demonstra:
 
 O código-fonte completo está disponível em:
 
-[`consulta_sintegra.py`](consulta_sintegra.py)
+[`Main.java`](src/main/java/Main.java)
+
+---
+
+## 🔄 Fluxo de consulta assíncrona
+
+A API utiliza processamento assíncrono baseado em `request_id`. **As consultas normalmente apresentam retornos muito rápidos, podendo ocorrer em milissegundos ou segundos**, dependendo da consulta e dos sistemas envolvidos.
+
+**Fluxo:**
+
+1. **Sem `request_id`** → inicia a consulta e retorna o `request_id`.
+2. **Com `request_id`** → retorna o resultado da consulta.
+
+Essa arquitetura evita manter a sessão aguardando o processamento, que pode depender de sistemas externos, como o SINTEGRA.
+
+### 📦 Consultas em lote
+
+Para consultar várias empresas:
+
+1. Enviar todas as requisições e armazenar os `request_id` retornados.
+2. Percorrer novamente o lote e consultar os resultados.
+
+Enquanto as demais requisições são enviadas, as primeiras já podem estar sendo processadas. Assim, quando a aplicação consulta os respectivos `request_id`, parte dos resultados pode já estar disponível.
+
+Esse modelo permite **sobrepor o envio das requisições ao processamento das consultas**, proporcionando melhor aproveitamento dos recursos e maior eficiência no processamento de lotes.
 
 ---
 
 ## 📄 Exemplo de retorno da API
 
-O exemplo abaixo apresenta um retorno da API após a conclusão da consulta:
+Os exemplos abaixo apresentam as etapas de execução e os retornos da API:
 
 ![Retorno JSON](teste_etapa1.png)
+
 ![Retorno JSON](teste_etapa2.png)
+
 ![Retorno JSON](teste_etapa3.png)
 
 ---
@@ -306,5 +331,8 @@ Isso ajuda outras pessoas a encontrarem este exemplo de integração.
 ---
 
 Made with ❤️ by **ArquivoNfe**
+
+https://www.arquivo-nfe.com
+
 
 https://www.arquivo-nfe.com
