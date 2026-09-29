@@ -289,14 +289,13 @@ Essa arquitetura evita manter a sessão aguardando o processamento, que pode dep
 
 ### 📦 Consultas em lote
 
-Para consultar várias empresas:
+Para consultar várias empresas, a aplicação pode:
 
-1. Enviar todas as requisições e armazenar os `request_id` retornados.
-2. Percorrer novamente o lote e consultar os resultados.
+Enviar todas as requisições e armazenar os request_id retornados.
 
-Enquanto as demais requisições são enviadas, as primeiras já podem estar sendo processadas. Assim, quando a aplicação consulta os respectivos `request_id`, parte dos resultados pode já estar disponível.
+Percorrer novamente o lote e consultar os resultados.
 
-Esse modelo permite **sobrepor o envio das requisições ao processamento das consultas**, proporcionando melhor aproveitamento dos recursos e maior eficiência no processamento de lotes.
+Enquanto as demais requisições são enviadas, as primeiras muito provavelmente já estarão processadas. Assim, quando a aplicação consulta os respectivos request_id, boa parte dos resultados, senão todos, podem já estar disponível.
 
 ---
 
