@@ -19,27 +19,27 @@ A API permite realizar consultas utilizando **CNPJ, CPF ou Inscrição Estadual 
 
 ## Benefícios
 
-✔ Consulta por CNPJ, CPF ou IE
-✔ Dados cadastrais retornados pela API
-✔ Integração simples via API REST
-✔ Processamento assíncrono utilizando `request_id`
-✔ Exemplo prático de integração em Java
+✔ Consulta por CNPJ, CPF ou IE<br>
+✔ Dados cadastrais retornados pela API<br>
+✔ Integração simples via API REST<br>
+✔ Processamento assíncrono utilizando `request_id`<br>
+✔ Exemplo prático de integração em Java<br>
 
 ## Casos de uso
 
-✔ Validação cadastral antes da emissão de NF
-✔ Conferência cadastral automática
-✔ Verificação de informações de empresas e contribuintes
-✔ Integração com sistemas ERP e aplicações próprias
-✔ Processos de KYC (Know Your Customer)
+✔ Validação cadastral antes da emissão de NF<br>
+✔ Conferência cadastral automática<br>
+✔ Verificação de informações de empresas e contribuintes<br>
+✔ Integração com sistemas ERP e aplicações próprias<br>
+✔ Processos de KYC (Know Your Customer)<br>
 
 ## Diferenciais
 
-✔ Consulta dos dados cadastrais disponibilizados pela SEFAZ da UF consultada.
-✔ Comunicação segura por HTTPS.
-✔ Infraestrutura hospedada na Oracle Cloud no Brasil.
-✔ Painel web para configurações, consultas manuais e acompanhamento das integrações via API.
-✔ API REST com suporte a consultas por CNPJ, CPF ou Inscrição Estadual.
+✔ Consulta dos dados cadastrais disponibilizados pela SEFAZ da UF consultada.<br>
+✔ Comunicação segura por HTTPS.<br>
+✔ Infraestrutura hospedada na Oracle Cloud no Brasil.<br>
+✔ Painel web para configurações, consultas manuais e acompanhamento das integrações via API.<br>
+✔ API REST com suporte a consultas por CNPJ, CPF ou Inscrição Estadual.<br>
 
 ---
 
