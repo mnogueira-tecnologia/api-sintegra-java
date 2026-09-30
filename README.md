@@ -295,7 +295,7 @@ Enviar todas as requisições e armazenar os request_id retornados.
 
 Percorrer novamente o lote e consultar os resultados.
 
-Enquanto as demais requisições são enviadas, as primeiras muito provavelmente já estarão processadas. Assim, quando a aplicação consulta os respectivos request_id, boa parte dos resultados, senão todos, podem já estar disponível.
+Enquanto as demais requisições são enviadas, as primeiras provavelmente já terão sido processadas. Assim, quando a aplicação consulta os respectivos request_id, boa parte dos resultados, senão todos, já poderá estar disponível.
 
 ---
 
